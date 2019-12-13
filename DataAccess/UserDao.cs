@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 using Common.Cache;
+
 namespace DataAccess
 {
     public class UserDao:ConnectiontoMySQL
     {
         public bool Login(string user, string pass)
         {
-            using (var connection= GetConnection())
+            using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new MySqlCommand())
@@ -27,18 +28,19 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            UserLoginCache.usuario = reader.GetString(0);
-                            UserLoginCache.pass = reader.GetString(1);
-                            UserLoginCache.nombre = reader.GetString(2);
-                            UserLoginCache.tipo = reader.GetInt32(3);
+                            UserCache.usuario = reader.GetString(0);
+                            UserCache.pass = reader.GetString(1);
+                            UserCache.nombre = reader.GetString(2);
+                            UserCache.tipo = reader.GetInt32(3);
                         }
                         return true;
                     }
                     else
                         return false;
-                     
+
                 }
             }
         }
     }
 }
+

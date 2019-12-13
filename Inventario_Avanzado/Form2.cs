@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using pjtImagenbaseDatos;
 
-namespace MenuResponsive
+namespace Inventario_Avanzado
 {
     public partial class Form2 : Form
     {
@@ -30,7 +29,7 @@ namespace MenuResponsive
             for (int i = 0; i < cont; i++)
             {
                 //dgvImagen.Rows[i].Height = 700;
-                
+
             }
         }
 

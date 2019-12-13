@@ -8,12 +8,11 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 
-namespace pjtImagenbaseDatos
+namespace Inventario_Avanzado
 {
     class clsConexiones
     {
-
-      public static  MySqlConnection cnx = new MySqlConnection("Server=127.0.0.1; database=prueba; Uid=root; pwd=Aa123;");
+        public static MySqlConnection cnx = new MySqlConnection("Server=127.0.0.1; database=prueba; Uid=root; pwd=Aa123;");
 
 
         public static DataTable EjecutarQuery(string Q)
@@ -37,7 +36,7 @@ namespace pjtImagenbaseDatos
             {
                 throw;
             }
-            finally{ cnx.Close(); }
+            finally { cnx.Close(); }
 
             return dt;
 

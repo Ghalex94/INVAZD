@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
 
-namespace MenuResponsive
+namespace Inventario_Avanzado
 {
     public partial class FPrincipal : Form
     {
@@ -19,7 +19,7 @@ namespace MenuResponsive
             button1.BackColor = Color.White;
             button2.BackColor = Color.White;
             button3.BackColor = Color.White;
-            AbrirFOrmulario<hiden>();
+            AbrirFOrmulario<FHidden>();
         }
 
 
@@ -46,24 +46,6 @@ namespace MenuResponsive
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AbrirFOrmulario<Form1>();
-            button1.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AbrirFOrmulario<Form2>();
-            button2.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AbrirFOrmulario<Form3>();
-            button3.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["Form1"] == null)
@@ -71,7 +53,7 @@ namespace MenuResponsive
                 button1.BackColor = Color.White;
             }
             if (Application.OpenForms["Form2"] == null)
-            { 
+            {
 
                 button2.BackColor = Color.White;
             }
@@ -81,26 +63,15 @@ namespace MenuResponsive
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if(MessageBox.Show("Estas seguro de Cerrar Sesion","Aviso",MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            LoadUserData();
-        }
-
         private void LoadUserData()
         {
-            lblUsuario.Text = UserLoginCache.usuario;
-            lblNombre.Text = UserLoginCache.nombre;
-            if(UserLoginCache.tipo == 0)
+            lblUsuario.Text = UserCache.usuario;
+            lblNombre.Text = UserCache.nombre;
+            if (UserCache.tipo == 0)
             {
                 lblTipo.Text = "Super Admin";
-            }else if (UserLoginCache.tipo == 1)
+            }
+            else if (UserCache.tipo == 1)
             {
                 lblTipo.Text = "Administrador";
             }
@@ -108,6 +79,38 @@ namespace MenuResponsive
             {
                 lblTipo.Text = "Empleado";
             }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro de Cerrar Sesion", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AbrirFOrmulario<Form1>();
+            button1.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AbrirFOrmulario<Form2>();
+            button2.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            AbrirFOrmulario<Form3>();
+            button3.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void FPrincipal_Load(object sender, EventArgs e)
+        {
+            LoadUserData();
         }
     }
 }

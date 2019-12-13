@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 
-namespace MenuResponsive
+namespace Inventario_Avanzado
 {
-    public partial class login : Form
+    public partial class FLogin : Form
     {
-        public login()
+        public FLogin()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace MenuResponsive
                         msgError("Usuario y Contraseña incorrectas. \n    Por favor intente denuevo.");
                         txtUsusario.Clear();
                         txtContra.Clear();
-                        txtUsusario.Focus();                         
+                        txtUsusario.Focus();
                     }
                 }
                 else msgError("Por favor ingrese la contraseña.");
@@ -61,3 +61,4 @@ namespace MenuResponsive
         }
     }
 }
+

@@ -16,7 +16,7 @@ namespace Inventario_Avanzado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FPrincipal());
+            Application.Run(new FLogin());
         }
     }
 }

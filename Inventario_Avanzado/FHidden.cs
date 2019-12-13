@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MenuResponsive
+namespace Inventario_Avanzado
 {
-    public partial class hiden : Form
+    public partial class FHidden : Form
     {
-        public hiden()
+        public FHidden()
         {
             InitializeComponent();
         }

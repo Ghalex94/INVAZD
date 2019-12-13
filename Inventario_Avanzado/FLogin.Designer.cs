@@ -1,6 +1,6 @@
-﻿namespace MenuResponsive
+﻿namespace Inventario_Avanzado
 {
-    partial class login
+    partial class FLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -55,8 +55,8 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(715, 381);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
             // 
@@ -65,7 +65,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 381);
+            this.panel1.Size = new System.Drawing.Size(240, 450);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -79,10 +79,10 @@
             this.panel2.Controls.Add(this.txtContra);
             this.panel2.Controls.Add(this.txtUsusario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(214, 0);
+            this.panel2.Location = new System.Drawing.Point(240, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(501, 381);
+            this.panel2.Size = new System.Drawing.Size(560, 450);
             this.panel2.TabIndex = 1;
             // 
             // lblmsgError
@@ -160,18 +160,14 @@
             this.txtUsusario.Size = new System.Drawing.Size(255, 20);
             this.txtUsusario.TabIndex = 0;
             // 
-            // login
+            // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 381);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(731, 420);
-            this.MinimumSize = new System.Drawing.Size(731, 420);
-            this.Name = "login";
-            this.Opacity = 0.9D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login";
+            this.Name = "FLogin";
+            this.Text = "FLogin";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -184,12 +180,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtContra;
-        private System.Windows.Forms.TextBox txtUsusario;
+        private System.Windows.Forms.Label lblmsgError;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblmsgError;
+        private System.Windows.Forms.TextBox txtContra;
+        private System.Windows.Forms.TextBox txtUsusario;
     }
 }
