@@ -15,6 +15,7 @@ namespace Inventario_Avanzado
         public Form2()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,12 +26,13 @@ namespace Inventario_Avanzado
         private void Form2_Load(object sender, EventArgs e)
         {
             dgvImagen.DataSource = clsConexiones.EjecutarQuery("select * from borrar");
-            int cont = dgvImagen.RowCount;
-            for (int i = 0; i < cont; i++)
-            {
-                //dgvImagen.Rows[i].Height = 700;
-
-            }
+            dgvImagen.RowTemplate.Height = 250;
+            dgvImagen.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            //int cont = dgvImagen.RowCount;
+            //for (int i = 0; i < cont; i++)
+            //{
+            //    dgvImagen.Rows[i].Height = 700;
+            //}
         }
 
         private void button1_Click_1(object sender, EventArgs e)

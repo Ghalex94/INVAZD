@@ -37,7 +37,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(834, 126);
+            this.pictureBox1.Location = new System.Drawing.Point(762, 115);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 81);
             this.pictureBox1.TabIndex = 5;
@@ -45,7 +45,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(836, 12);
+            this.button1.Location = new System.Drawing.Point(762, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -58,7 +58,7 @@
             this.dgvImagen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvImagen.Location = new System.Drawing.Point(0, 0);
             this.dgvImagen.Name = "dgvImagen";
-            this.dgvImagen.Size = new System.Drawing.Size(826, 452);
+            this.dgvImagen.Size = new System.Drawing.Size(743, 390);
             this.dgvImagen.TabIndex = 3;
             // 
             // Form2

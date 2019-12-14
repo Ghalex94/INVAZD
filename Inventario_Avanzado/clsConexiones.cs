@@ -17,15 +17,14 @@ namespace Inventario_Avanzado
 
         public static DataTable EjecutarQuery(string Q)
         {
-            MemoryStream MS = new MemoryStream();
+            //MemoryStream MS = new MemoryStream();
 
-            byte[] Imagenes = MS.GetBuffer();
+            //byte[] Imagenes = MS.GetBuffer();
 
             DataTable dt = new DataTable();
             MySqlCommand cmd = new MySqlCommand(Q, cnx);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            cmd.Parameters.AddWithValue("@Imagen", Imagenes);
-
+            //cmd.Parameters.AddWithValue("@Imagen", Imagenes);
             try
             {
                 cnx.Open();
