@@ -16,10 +16,11 @@ namespace Inventario_Avanzado
         public FPrincipal()
         {
             InitializeComponent();
-            button1.BackColor = Color.White;
-            button2.BackColor = Color.White;
-            button3.BackColor = Color.White;
+            subButton1.BackColor = Color.White;
+            sub2Button1.BackColor = Color.White;
+            sub3Button1.BackColor = Color.White;
             AbrirFOrmulario<FHidden>();
+            customizeDesign();
         }
 
 
@@ -50,16 +51,16 @@ namespace Inventario_Avanzado
         {
             if (Application.OpenForms["Form1"] == null)
             {
-                button1.BackColor = Color.White;
+                subButton1.BackColor = Color.White;
             }
             if (Application.OpenForms["Form2"] == null)
             {
 
-                button2.BackColor = Color.White;
+                sub2Button1.BackColor = Color.White;
             }
             if (Application.OpenForms["Form3"] == null)
             {
-                button3.BackColor = Color.White;
+                sub3Button1.BackColor = Color.White;
             }
         }
 
@@ -90,27 +91,75 @@ namespace Inventario_Avanzado
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            AbrirFOrmulario<Form1>();
-            button1.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            AbrirFOrmulario<Form2>();
-            button2.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            AbrirFOrmulario<Form3>();
-            button3.BackColor = Color.FromArgb(12, 61, 92);
-        }
-
         private void FPrincipal_Load(object sender, EventArgs e)
         {
             LoadUserData();
         }
+
+        #region Ocultamos los subBotones
+        private void customizeDesign()
+        {
+            panelSubbutton1.Visible = false;
+            panelSubbutton2.Visible = false;
+            panelSubbutton3.Visible = false;
+        }
+        #endregion
+        
+        private void hideSubMenu()
+        {
+            if (panelSubbutton1.Visible == true)
+                panelSubbutton1.Visible = false;
+            if (panelSubbutton2.Visible == true)
+                panelSubbutton2.Visible = false;
+            if (panelSubbutton3.Visible == true)
+                panelSubbutton3.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+
+        #region a cada boton principal se le llama la funcion para mostrar los sub menus
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubbutton1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubbutton2);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubbutton3);
+        }
+        #endregion
+
+        private void subButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFOrmulario<Form1>();
+            subButton1.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void sub2Button1_Click(object sender, EventArgs e)
+        {
+            AbrirFOrmulario<Form2>();
+            sub2Button1.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void sub3Button1_Click(object sender, EventArgs e)
+        {
+            AbrirFOrmulario<Form3>();
+            sub3Button1.BackColor = Color.FromArgb(12, 61, 92);
+        }
     }
+
 }
